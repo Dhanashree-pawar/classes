@@ -1,0 +1,45 @@
+//class in c++
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+class rect{
+private:
+    int len;
+    int bdt;
+public:
+rect() {len=bdt=0;}//default constructor
+rect(int l, int b){len=l; bdt=b;} //constructor are overloaded this is paramertized constructor
+//just a prototype
+int area() return len*bdt;//func which perofm operatn on data var- facilitators
+int perimeter() {return (2*(len+bdt))};//facilitator
+int getlen() {return len;}//accessor
+void setlen(int l){ len=l;}//mutator
+~ rect() {cout<<"destructor";}//destructor
+};
+// here we need to define paramertized constructor
+//rect :: rect(int l, int b){
+  //  len=l;
+    //bdt=b;
+//}
+//declare area func
+//int rect :: area(){
+  //  return len*bdt;
+//}
+//declare peri func
+//int rect :: perimeter(){
+  //  return 2*(len+bdt);
+//}
+// implememnt destructor
+//rect :: ^rect(){}
+
+int main()
+{
+  rect r1(10,5);// dont use = to initialize
+  int len,bdt;
+  
+ cout<<r1.area()<<endl;
+ cout<<r1.perimeter()<<endl;
+ r1.setlen(20);
+ cout<<"after"<<r1.getlen()<<endl;  
+  return 0;
+}
